@@ -38,7 +38,7 @@ public class Main {
 		dwalin.setAuthor("Tolkien");
 		dwarfs.add(dwalin);
 
-		System.out.println("The Dwarfs Disney are:");
+		System.out.println("The Disney  Dwarfs are:");
 		
 		for(Dwarf dwarf:dwarfs) {
 			//System.out.println(dwarf.getName() + "    " + dwarf.getAuthor());
@@ -47,7 +47,7 @@ public class Main {
 			}
 		}
 		
-		System.out.println("The Dwarfs Tolkien are:");
+		System.out.println("The Tolkien Dwarfs are:");
 
 		for(Dwarf dwarf:dwarfs) {
 			//System.out.println(dwarf.getName() + "    " + dwarf.getAuthor());
