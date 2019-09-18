@@ -4,17 +4,17 @@ public class TopTen {
 	
 	//instance variables 
 		private String name;
-		private String author;
+		private String artist;
 		private String image;
 		
 		//constructors
 		public TopTen() {
 		super();
 	}
-		public TopTen(String name, String author, String image) {
+		public TopTen(String name, String artist, String image) {
 			super();
 			this.name = name;
-			this.author = author;
+			this.artist = artist;
 			this.image = image;
 		}
 		
@@ -25,11 +25,11 @@ public class TopTen {
 		public void setName(String name) {
 			this.name = name;
 		}
-		public String getAuthor() {
-			return author;
+		public String getArtist() {
+			return artist;
 		}
-		public void setAuthor(String author) {
-			this.author = author;
+		public void setArtist(String artist) {
+			this.artist = artist;
 		}
 		public String getImage() {
 			return image;
@@ -40,6 +40,7 @@ public class TopTen {
 		
 		
 	}
+
 
 
 

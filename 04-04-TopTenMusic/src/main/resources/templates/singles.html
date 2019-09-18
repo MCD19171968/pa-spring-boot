@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
-
+<style>
+  body {
+  background: url('https://wallpaperplay.com/walls/full/7/d/8/259629.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+</style>
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
@@ -53,7 +61,7 @@
 				<tr th:each="TopTen: ${topTen}">
 					<td th:text="${TopTen.name}">Happy></td>
 
-					<td><img src ="..static/img2/number1.jpg" th:src="@{/img2/} + ${topTen.image}"></img></td>
+					<td><img src ="..static/img2/number1.jpg" th:src="@{/img2/} + ${TopTen.image}"></img></td>
 				</tr>
 			</tbody>
 		</table>

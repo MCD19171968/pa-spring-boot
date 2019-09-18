@@ -1,4 +1,5 @@
 package uk.ac.belfastmet.topten.controller;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,7 +24,7 @@ public class TopTenController {
 		
 		TopTenService topTenService = new TopTenService();
 		model.addAttribute("pageTitle", "Top Ten!");
-		model.addAttribute("top ten",topTenService.getSinglesTopTen());
+		model.addAttribute("topTen",topTenService.getSinglesTopTen());
 		
 
 		
