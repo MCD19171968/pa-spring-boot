@@ -3,7 +3,7 @@
 <head>
 <style>
   body {
-  background: url('https://wallpaperplay.com/walls/full/7/d/8/259629.jpg') no-repeat center center fixed;
+  background: url('/img2/headphones.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -38,18 +38,18 @@
 			</li>
 		</ul>
 	</nav>
-	<div class="jumbotron text-center">
+	<div class="jumbotron text-center bg-transparent">
 
-		<h1>Singles Top Ten </h1>
+		<h1><font color= "white"> Albums Top Ten</font></h1>
 		<h2 th:text="${numberOfTopTen}"></h2>
 		<br/>
 
 	</div>
 
 
-	<div class="container">
+	<div class="container text-white">
 
-		<p>This site will contain information about Top Ten Singles</p>
+		<p>This site will contain information about Top Ten Albums</p>
 		<table class="table table-stripped">
 			<thead>
 				<tr>
@@ -61,7 +61,7 @@
 				<tr th:each="TopTen: ${topTen}">
 					<td th:text="${TopTen.name}">Happy></td>
 
-					<td><img src ="..static/img2/number1.jpg" th:src="@{/img2/} + ${TopTen.image}"></img></td>
+					<td><img src ="..static/img2/album1.jpg" th:src="@{/img2/} + ${TopTen.image}"></img></td>
 				</tr>
 			</tbody>
 		</table>
