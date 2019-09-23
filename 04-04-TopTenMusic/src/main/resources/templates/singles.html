@@ -2,13 +2,13 @@
 <html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
 <style>
-  body {
-/*   background: url('http://www.desktopwallpaperhd.net/wallpapers/9/1/wallpaper-images-records-music-99489.jpg') no-repeat center center fixed; */
-background: url('/img2/single1.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+body {
+	/*   background: url('http://www.desktopwallpaperhd.net/wallpapers/9/1/wallpaper-images-records-music-99489.jpg') no-repeat center center fixed; */
+	background: url('/img2/single1.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
 }
 </style>
 
@@ -38,13 +38,18 @@ background: url('/img2/single1.jpg') no-repeat center center fixed;
 			</li>
 			<li class="nav-item"><a class="nav-link" href="/albums">Albums</a>
 			</li>
+			<li>
+			<li class="nav-item"><a class="nav-link" href="/genre">Genre</a>
+			</li>
 		</ul>
 	</nav>
 	<div class="jumbotron text-center bg-transparent">
 
-		<h1><font color="white">Singles Top Ten</font></h1>
+		<h1>
+			<font color="white">Singles Top Ten</font>
+		</h1>
 		<h2 th:text="${numberOfTopTen}"></h2>
-		<br/>
+		<br />
 
 	</div>
 
@@ -63,7 +68,8 @@ background: url('/img2/single1.jpg') no-repeat center center fixed;
 				<tr th:each="TopTen: ${topTen}">
 					<td th:text="${TopTen.name}">Happy></td>
 
-					<td><img src ="..static/img2/number1.jpg" th:src="@{/img2/} + ${TopTen.image}"></img></td>
+					<td><img src="..static/img2/number1.jpg"
+						th:src="@{/img2/} + ${TopTen.image}"></img></td>
 				</tr>
 			</tbody>
 		</table>

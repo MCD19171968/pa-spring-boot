@@ -29,6 +29,7 @@ public class TopTenService {
 		return this.singlesTopTen;
 
 	}
+
 	public ArrayList<TopTen> getAlbumsTopTen(){
 
 		this.albumsTopTen = new ArrayList<TopTen>();
@@ -42,7 +43,7 @@ public class TopTenService {
 		this.albumsTopTen.add(new TopTen("K-12", "Melanie Martinez", "Album8.jpg"));
 		this.albumsTopTen.add(new TopTen("Snacks", "Jax Jones", "Album9.jpg"));
 		this.albumsTopTen.add(new TopTen("WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?", "Billie Eilish", "Album10.jpg"));
-		
+
 
 		return this.albumsTopTen;
 	}

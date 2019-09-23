@@ -1,13 +1,15 @@
 package uk.ac.belfastmet.todo;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import uk.ac.belfastmet.todo.Application;
+
 @SpringBootApplication
-public class TodoApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TodoApplication.class, args);
+		SpringApplication.run(Application.class, args);
+
 	}
 
 }
