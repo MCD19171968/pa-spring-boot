@@ -15,18 +15,18 @@ import uk.ac.belfastmet.todolist.service.ToDoListService;
 public class ToDoListController {
 
 	Logger logger = LoggerFactory.getLogger(ToDoListController.class);
-	
+
 	@RequestMapping(value= "/", method = RequestMethod.GET)
-	
+
 	public String homePage() {
-		
+
 		logger.info("An INFO Message");
 		ToDoList todolist = new ToDoList();
 		logger.info(todolist.toString());
 		return "index";
 
 	}
-	
+
 	@RequestMapping(value= "/current", method = RequestMethod.GET)
 
 	public String currentPage(Model model) {
@@ -39,5 +39,15 @@ public class ToDoListController {
 		return "current";
 	}
 
+	@RequestMapping(value= "/completed", method = RequestMethod.GET)
 
+	public String completedPage(Model model) {
+
+		ToDoListService toDoListService = new ToDoListService();
+		model.addAttribute("pageTitle", "Done!");
+		model.addAttribute("toDoList",toDoListService.getCompletedToDoList());
+
+
+		return "completed";
+	}
 }

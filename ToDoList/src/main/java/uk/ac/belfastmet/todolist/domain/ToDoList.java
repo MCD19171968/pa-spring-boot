@@ -1,7 +1,7 @@
 package uk.ac.belfastmet.todolist.domain;
 
 public class ToDoList {
-
+// Variables 
 	private String description;
 	private String date;
 	private String name;
@@ -11,7 +11,7 @@ public class ToDoList {
 	public String getDescription() {
 		return description;
 	}
-
+// Constructors
 	public ToDoList() {
 		super();
 	}
@@ -24,6 +24,7 @@ public class ToDoList {
 		this.priority = priority;
 		this.completion = completion;
 	}
+	//  Getters and setters
 	public void setDescription(String description) {
 		this.description = description;
 	}
