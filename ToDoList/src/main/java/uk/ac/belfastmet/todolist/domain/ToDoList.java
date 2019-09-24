@@ -1,16 +1,24 @@
 package uk.ac.belfastmet.todolist.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+@Entity
+@Table(name = "task")
+
 public class ToDoList {
 // Variables 
+	private long id;
 	private String description;
 	private String date;
 	private String name;
 	private String priority;
-	private Boolean completion;
+	//private Boolean completion;
 
-	public String getDescription() {
-		return description;
-	}
 // Constructors
 	public ToDoList() {
 		super();
@@ -22,36 +30,56 @@ public class ToDoList {
 		this.date = date;
 		this.name = name;
 		this.priority = priority;
-		this.completion = completion;
+		//this.completion = completion;
 	}
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	public long getID() {
+		return id;
+	}
+	
 	//  Getters and setters
-	public void setDescription(String description) {
-		this.description = description;
+
+	
+	@Column(name = "name")
+	public String getDescription() {
+		return description;
 	}
+	
+	public void setid(long id) {
+		this.id = id;
+	}
+	
+	@Column(name = "description")
 	public String getDate() { 
 		return date;
 	}
-	public void setDate(String date) {
-		this.date = date;
+	public void setid1(long id) {
+		this.id = id;
 	}
+	
+	@Column(name = "user")
 	public String getName() {
 		return name;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setId(long id) {
+		this.id = id;
 	}
+	
+	@Column(name = "priority")
 	public String getPriority() {
 		return priority;
 	}
-	public void setPriority(String priority) {
-		this.priority = priority;
+	public void setID(long id) {
+		this.id = id;
 	}
-	public Boolean getCompletion() {
-		return completion;
-	}
-	public void setCompletion(Boolean completion) {
-		this.completion = completion;
-	} 
+	
+//	public Boolean getCompletion() {
+//		return completion;
+//	}
+//	public void setCompletion(Boolean completion) {
+//		this.completion = completion;
+//	} 
 
 
 

@@ -2,6 +2,7 @@ package uk.ac.belfastmet.todolist.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +13,11 @@ import uk.ac.belfastmet.todolist.domain.ToDoList;
 import uk.ac.belfastmet.todolist.service.ToDoListService;
 @RequestMapping()
 @Controller
+
+
 public class ToDoListController {
+	@Autowired
+	private ToDoListService toDoListService;
 
 	Logger logger = LoggerFactory.getLogger(ToDoListController.class);
 	
@@ -24,6 +29,7 @@ public class ToDoListController {
 	
 
 	public String homePage() {
+		toDoListService.getNumberOfTasks();
 	
 		
 		logger.info("An INFO Message");
@@ -34,11 +40,7 @@ public class ToDoListController {
 	}
 	
 	
-/**
- * 
- * @param model
- * @return current html
- */
+
 	@RequestMapping(value= "/current", method = RequestMethod.GET)
 
 	public String currentPage(Model model) {
@@ -49,24 +51,6 @@ public class ToDoListController {
 		
 		
 		return "current";
-	}
-	/**
-	 * 
-	 * @param model
-	 * @return completed html
-	 */
-
-	@RequestMapping(value= "/completed", method = RequestMethod.GET)
-
-	public String completedPage(Model model) {
-
-		ToDoListService toDoListService = new ToDoListService();
-		model.addAttribute("pageTitle", "Done!");
-		model.addAttribute("toDoList",toDoListService.getCompletedToDoList());
-
-
-		return "completed";
-		
 	}
 	
 	

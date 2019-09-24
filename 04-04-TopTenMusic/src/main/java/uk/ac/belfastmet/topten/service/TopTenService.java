@@ -16,7 +16,7 @@ public class TopTenService {
 
 		this.singlesTopTen.add(new TopTen("Take Me Back to London (feat. Stormzy) ", "Ed Sheeran", "Number1.jpg"));
 		this.singlesTopTen.add(new TopTen("Taste (Make It Shake)", "Aitch", "Number2.jpg"));
-		this.singlesTopTen.add(new TopTen("Higher Love", "Kygo & Whitney Houston", "Number3.jpg"));
+		this.singlesTopTen.add(new TopTen("Higher Love", "Kygo & Whitney Housto", "Number3.jpg"));
 		this.singlesTopTen.add(new TopTen("Ladbroke Grove", "AJ Tracey", "Number4.jpg"));
 		this.singlesTopTen.add(new TopTen("Circles", "Post Malone", "Number5.jpg"));
 		this.singlesTopTen.add(new TopTen("Joel Sorry", "Joel Corry", "Number6.jpg"));
