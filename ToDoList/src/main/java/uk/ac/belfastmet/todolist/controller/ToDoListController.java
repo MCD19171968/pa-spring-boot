@@ -17,41 +17,37 @@ import uk.ac.belfastmet.todolist.service.ToDoListService;
 
 public class ToDoListController {
 	@Autowired
-	private ToDoListService toDoListService;
+	private ToDoListService wiredToDoListService;
 
 	Logger logger = LoggerFactory.getLogger(ToDoListController.class);
-	
-/**
- * 
- * @return index html
- */
+
+	/**
+	 * 
+	 * @return index html
+	 */
 	@RequestMapping(value= "/", method = RequestMethod.GET)
-	
 
 	public String homePage() {
-		toDoListService.getNumberOfTasks();
-	
-		
-		logger.info("An INFO Message");
-		ToDoList todolist = new ToDoList();
-		logger.info(todolist.toString());
+
+		wiredToDoListService.getCurrentToDoList();
 		return "index";
 
 	}
-	
-	
 
 	@RequestMapping(value= "/current", method = RequestMethod.GET)
 
 	public String currentPage(Model model) {
 
-		ToDoListService toDoListService = new ToDoListService();
+		//ToDoListService toDoListService = new ToDoListService();
 		model.addAttribute("pageTitle", "To DO!");
-		model.addAttribute("toDoList",toDoListService.getCurrentToDoList());
+		model.addAttribute("toDoList",wiredToDoListService.getCurrentToDoList());
 		
-		
+		logger.info("An INFO Message");
+		ToDoList todolist = new ToDoList();
+		logger.info(todolist.toString());
+
 		return "current";
 	}
-	
-	
+
+
 }

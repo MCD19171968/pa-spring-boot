@@ -57,11 +57,11 @@
 
 			<tbody>
 				<tr th:each="ToDoList: ${toDoList}">
-					<td th:text="${ToDoList.description}"></td>
-					<td th:text="${ToDoList.date}"></td>
 					<td th:text="${ToDoList.name}"></td>
+					<td th:text="${ToDoList.description}"></td>
+					<td th:text="${ToDoList.user}"></td>
 					<td th:text="${ToDoList.priority}"></td>
-					<td th:text="${ToDoList.completion}"></td>
+					    
 					</tr>
 			</tbody>
 		</table>
